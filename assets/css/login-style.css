@@ -1,0 +1,12 @@
+/* Remember me checkbox label styling */
+.rmb-checkbox {
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Make checkbox BIGGER */
+input[type='checkbox'] {
+  width: 1.5rem;
+  height: 1.5rem;
+}

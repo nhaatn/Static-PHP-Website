@@ -1,0 +1,259 @@
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* Get rid of border on fieldset */
+fieldset {
+  border: 0;
+  margin-top: 15rem;
+}
+
+/* Content wrapper to have BG as full viewport */
+.contact-wrapper {
+  height: 100%;
+  background-image: url("../img/contact-bg.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  overflow-x: hidden;
+}
+
+/* Make card container a flexbox */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Meet the team TITLE a flexbox */
+.meet-team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Meet the team H1 styling */
+.meet-team h1 {
+  margin-top: 20rem;  
+  margin-bottom: 10rem;
+
+  letter-spacing: 3px;
+  font-size: clamp(4rem, 4vw, 6rem);
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+/* Give meet Meet The Team H1 an underline */
+.meet-team .underline {
+  border-bottom: 5px solid crimson;
+}
+
+/* Card styling */
+.card1, .card2, .card3 {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+
+  font-family: 'Roboto', sans-serif;
+  border-radius: 18px;
+  background-color: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  text-align: center;
+
+  margin: 0 5rem;
+}
+
+/* Card-1 image styling */
+.card1-image {
+  grid-area: image;
+  background-image: url("../img/guy2.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Card-2 image styling */
+.card2-image {
+  grid-area: image;
+  background-image: url("../img/girl1.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Card-3 image styling */
+.card3-image {
+  grid-area: image;
+  background-image: url("../img/guy1.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  background-position: top;
+}
+
+/* ALL card job title styling */
+.card1 .job-title, .card2 .job-title, .card3 .job-title {
+  color: crimson;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+/* ALL card gets a margin for the grid area */
+.card1-text, .card2-text, .card3-text {
+  grid-area: text;
+  margin: 2.5rem;
+}
+
+/* All card NAME styling */
+.card1-text h2, .card2-text h2, .card3-text h2 {
+  margin-top: 0px;
+  margin-bottom: 1.5rem;
+  font-size: 28px;
+  color: #333;
+}
+
+/* ALL card dummy text styling */
+.card1-text p, .card2-text p, .card3-text p {
+  color: grey;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* ALL card icon styling */
+.card1-icon, .card2-icon, .card3-icon {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  padding-top: 2rem;
+
+  font-size: 3.5rem;
+  color: white;
+
+  background-color: rgb(224, 45, 81);
+
+}
+
+/* Form title (under the cards) styling */
+.meet-team .message-title {
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.5rem;
+
+  margin-top: 13rem;
+  margin-bottom: 3rem;
+}
+
+/* Give the form a width */
+form {
+  width: 70%;
+}
+
+/* Make form div a flexbox */
+form div {
+  width: 40%;
+
+  margin: auto;
+  margin-top: 2rem;
+
+  display: flex;
+}
+
+/* Form under cards TEXT AREA styling */
+.meet-team input, .meet-team textarea {
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Form under cards BTN styling */
+.meet-team .contact-submit-btn {
+  width: 30%;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Form under cards BTN styling HOVER */
+.meet-team .contact-submit-btn:hover {
+  color: white;
+  background-color: rgb(172, 16, 47);
+  border: 2px solid rgb(172, 16, 47);
+}
+
+/* Form under cards BTN styling ACTIVE */
+.meet-team .contact-submit-btn:active {
+  color: black;
+  background-color: white;
+  border: 2px solid white;
+}
+
+/* Webkits for the placeholder text color change */
+::-moz-placeholder { 
+  color: crimson;
+ }
+
+ ::-webkit-input-placeholder {
+   color: crimson;
+ }
+
+  /* FORM ACESSIBILITY (make label for forms not display as I want to keep the original design) */
+  .form-label {
+    display: none;
+  }
+
+
+/* RESPONSIVE styling */
+@media (max-width: 735px) {
+  .contact-wrapper {
+    min-height: 100%;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card1, .card2, .card3 {
+    margin-bottom: 5rem;
+  }
+
+  form {
+    width: 180%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .meet-team .contact-submit-btn {
+    width: 50%;
+  }
+
+  fieldset {
+    margin-top: 7rem;
+  }
+}

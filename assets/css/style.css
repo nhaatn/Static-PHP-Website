@@ -1,0 +1,220 @@
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* Navigation bar styling */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  height: 8vh;
+  width: 100%;
+  min-width: 50ch;
+
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* Brand/Logo Styling */
+.brand {
+  margin: 0 5rem;
+  text-decoration: none;
+
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  line-height: 1;
+  border-bottom: 5px solid crimson;
+}
+
+/* Brand/Logo Styling to make part red */
+.brand span {
+  color: crimson;
+  font-style: italic;
+}
+
+/* Navigation bar LINK styling (top right corner) */
+.nav-links {
+  list-style: none;
+
+  min-width: 30%;
+  padding: 0;
+  margin: 0 5rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Navigation bar LINK A-TAG styling (top right corner) */
+.nav-links li a {
+  display: block;
+
+  padding: 0.5rem 1.5rem;
+
+  border: 2px solid white;
+  border-radius: 3px;
+
+  font-family: 'Roboto Condensed', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 2rem;
+}
+
+/* REGISTER BTN styling */
+.nav-links .register-btn {
+  color: white;
+  background-color: rgb(172, 16, 47);
+  border: 2px solid rgb(172, 16, 47);
+}
+
+/* REGISTER btn HOVER */
+.nav-links li a:hover {
+  color: black;
+  background-color: white;
+}
+
+/* REGISTER btn ACTIVE */
+.nav-links li a:active {
+  color: white;
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Content wrapper to have BG as full viewport */
+.headMain-wrapper {
+  height: 100vh;
+  background-image: url("../img/car-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Make the main container a flexbox */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+/* Hero container styling (including flexbox and BG) */
+.hero-container {
+  min-height: 65%;
+  min-width: 70%;
+
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20px;
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* Hero HEADER styling */
+.hero-container h1 {
+  font-size: clamp(3rem, 4vw, 6.5rem);
+  margin-bottom: 5rem;
+}
+
+/* Hero TEXT styling */
+.hero-container p {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 5rem;
+}
+
+/* Hero learn BTN styling */
+.hero-container .learn-btn {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  
+  padding: 1.5rem 2.5rem;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+/* Hero learn BTN HOVER */
+.hero-container .learn-btn:hover {
+  color: crimson;
+  border: 2px solid crimson;
+  transition: ease-in 0.5s;
+}
+
+/* Long Text container */
+.long-text-container {
+  width: 75%;
+  margin: auto;
+}
+
+/* Long Text H1 styling */
+.long-text-container h1 {
+  font-size: clamp(4rem, 4vw, 7rem);
+  font-family: 'Roboto', sans-serif;
+  margin: 3rem 0;
+  color: crimson;
+}
+
+/* Long Text H2 styling */
+.long-text-container h2 {
+  font-size: clamp(3rem, 4vw, 5rem);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Long Text P styling */
+.long-text-container p {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 5rem;
+}
+
+/* Footer Styling (global) */
+footer {
+  font-size: clamp(1rem, 4vw, 2rem);
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 5rem;
+  padding: 1.5rem 0;
+
+  text-align: center;
+  position: relative;
+
+  color: white;
+  background-color: rgba(0,0,0,0.7);
+}
+
+
+/* RESPONSIVE styling */
+@media (max-width: 735px) {
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    padding-bottom: 11rem;
+  }
+
+  .brand {
+    margin-bottom: 1rem;
+  }
+  
+}

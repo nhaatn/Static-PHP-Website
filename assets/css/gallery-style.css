@@ -1,0 +1,85 @@
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+/* Gallery Page wrapper to make fit 100% */
+.g-page-wrapper {
+  height: 100%;
+  width: 100%;
+
+  background-image: url("../img/contact-bg.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Gallery section styling */
+.gallery-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 3rem;
+  padding: 3rem;
+}
+
+/* Gallery image styling */
+.gallery-section img {
+  width: 100%;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* Figcaption styling */
+.gallery-section figcaption {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+
+  margin-top: 1rem;
+}
+
+/* Gallery title (The Garage) styling */
+.gallery-title {
+  letter-spacing: 3px;
+  font-size: clamp(4rem, 4vw, 6rem);
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: white;
+
+  padding-top: 10vh;
+}
+
+/* Add a red underline to the title */
+.gallery-title .underline {
+  border-bottom: 5px solid crimson;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .gallery-section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 735px) {
+  .gallery-section {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .gallery-title {
+    padding-top: 18vh;
+  }
+}
